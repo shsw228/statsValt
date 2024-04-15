@@ -7,18 +7,21 @@
 
 import SwiftUI
 import SwiftData
+import SymbolPicker
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
-    
     @Query var games: [Game]
     
     var body: some View {
         NavigationStack {
             List{
                 ForEach(games){ game in
-                    GameListCell(game: game)
-                        .padding(2)
+                    NavigationLink(value: game.self) {
+                        GameListCell(game: game)
+                            .padding(2)
+                        
+                    }
                 }
                 .onDelete(perform: { indexSet in
                     delete(indexSet: indexSet)
@@ -35,6 +38,9 @@ struct ContentView: View {
                     )
                 }
             })
+            .navigationDestination(for: Game.self){ game in
+                SongListView(game: game)
+            }
             .navigationTitle("Games")
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
@@ -55,5 +61,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-

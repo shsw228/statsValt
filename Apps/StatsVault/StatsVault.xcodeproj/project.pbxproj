@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72F2F9A2BC1D9C60033A6A5 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = B72F2F992BC1D9C60033A6A5 /* SymbolPicker */; };
+		B7589D212BCD713300C7237D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7589D202BCD713300C7237D /* Song.swift */; };
+		B7589D232BCD7D4C00C7237D /* GameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7589D222BCD7D4C00C7237D /* GameEditView.swift */; };
+		B7589D252BCD8E8B00C7237D /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7589D242BCD8E8B00C7237D /* SongListView.swift */; };
 		B7B4D8E72BBB148F004110A3 /* StatsVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D8E62BBB148F004110A3 /* StatsVaultApp.swift */; };
 		B7B4D8E92BBB148F004110A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D8E82BBB148F004110A3 /* ContentView.swift */; };
 		B7B4D8EB2BBB1490004110A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B4D8EA2BBB1490004110A3 /* Assets.xcassets */; };
@@ -16,7 +20,7 @@
 		B7B4D9042BBB1490004110A3 /* StatsVaultUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9032BBB1490004110A3 /* StatsVaultUITestsLaunchTests.swift */; };
 		B7B4D9112BBB1F38004110A3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9102BBB1F38004110A3 /* Game.swift */; };
 		B7B4D9132BBBD8A6004110A3 /* GameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9122BBBD8A6004110A3 /* GameListCell.swift */; };
-		B7B4D9152BBBE7A6004110A3 /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9142BBBE7A6004110A3 /* Image+Data.swift */; };
+		B7EC33B82BC1B84D0004FC91 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC33B72BC1B84D0004FC91 /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7589D202BCD713300C7237D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		B7589D222BCD7D4C00C7237D /* GameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditView.swift; sourceTree = "<group>"; };
+		B7589D242BCD8E8B00C7237D /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		B7B4D8E32BBB148F004110A3 /* StatsVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatsVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B4D8E62BBB148F004110A3 /* StatsVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVaultApp.swift; sourceTree = "<group>"; };
 		B7B4D8E82BBB148F004110A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +56,7 @@
 		B7B4D9032BBB1490004110A3 /* StatsVaultUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVaultUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7B4D9102BBB1F38004110A3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B7B4D9122BBBD8A6004110A3 /* GameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCell.swift; sourceTree = "<group>"; };
-		B7B4D9142BBBE7A6004110A3 /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
+		B7EC33B72BC1B84D0004FC91 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72F2F9A2BC1D9C60033A6A5 /* SymbolPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7589D262BCD8EA000C7237D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7B4D8E82BBB148F004110A3 /* ContentView.swift */,
+				B7589D242BCD8E8B00C7237D /* SongListView.swift */,
+				B7589D222BCD7D4C00C7237D /* GameEditView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B7589D272BCD8EAC00C7237D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7B4D9102BBB1F38004110A3 /* Game.swift */,
+				B7589D202BCD713300C7237D /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B7B4D8DA2BBB148F004110A3 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +128,11 @@
 			isa = PBXGroup;
 			children = (
 				B7B4D9122BBBD8A6004110A3 /* GameListCell.swift */,
-				B7B4D9142BBBE7A6004110A3 /* Image+Data.swift */,
 				B7B4D8E62BBB148F004110A3 /* StatsVaultApp.swift */,
-				B7B4D9102BBB1F38004110A3 /* Game.swift */,
-				B7B4D8E82BBB148F004110A3 /* ContentView.swift */,
+				B7589D272BCD8EAC00C7237D /* Model */,
+				B7589D262BCD8EA000C7237D /* View */,
 				B7B4D8EA2BBB1490004110A3 /* Assets.xcassets */,
+				B7EC33B72BC1B84D0004FC91 /* Navigation.swift */,
 				B7B4D8EC2BBB1490004110A3 /* Preview Content */,
 			);
 			path = StatsVault;
@@ -152,6 +179,9 @@
 			dependencies = (
 			);
 			name = StatsVault;
+			packageProductDependencies = (
+				B72F2F992BC1D9C60033A6A5 /* SymbolPicker */,
+			);
 			productName = StatsVault;
 			productReference = B7B4D8E32BBB148F004110A3 /* StatsVault.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +254,9 @@
 				Base,
 			);
 			mainGroup = B7B4D8DA2BBB148F004110A3;
+			packageReferences = (
+				B72F2F982BC1D9C60033A6A5 /* XCRemoteSwiftPackageReference "SymbolPicker" */,
+			);
 			productRefGroup = B7B4D8E42BBB148F004110A3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,10 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7589D232BCD7D4C00C7237D /* GameEditView.swift in Sources */,
+				B7589D212BCD713300C7237D /* Song.swift in Sources */,
 				B7B4D8E92BBB148F004110A3 /* ContentView.swift in Sources */,
 				B7B4D9112BBB1F38004110A3 /* Game.swift in Sources */,
-				B7B4D9152BBBE7A6004110A3 /* Image+Data.swift in Sources */,
+				B7EC33B82BC1B84D0004FC91 /* Navigation.swift in Sources */,
 				B7B4D8E72BBB148F004110A3 /* StatsVaultApp.swift in Sources */,
+				B7589D252BCD8E8B00C7237D /* SongListView.swift in Sources */,
 				B7B4D9132BBBD8A6004110A3 /* GameListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B72F2F982BC1D9C60033A6A5 /* XCRemoteSwiftPackageReference "SymbolPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xnth97/SymbolPicker?ref=iosexample.com";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B72F2F992BC1D9C60033A6A5 /* SymbolPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B72F2F982BC1D9C60033A6A5 /* XCRemoteSwiftPackageReference "SymbolPicker" */;
+			productName = SymbolPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7B4D8DB2BBB148F004110A3 /* Project object */;
 }

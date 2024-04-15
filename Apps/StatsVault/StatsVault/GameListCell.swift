@@ -12,29 +12,37 @@ import SwiftData
 struct GameListCell: View {
     let name: String
     let sub: Date
-    let icon: Data?
+    let icon: String
+    let count: Int
     
     var body: some View {
-        
-        HStack(spacing: 10){
-            if let icon = icon,
-               let iconImage = Image(data: icon) {
-                iconImage
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxHeight: 50)
-            }
-            Text(name)
+        HStack(spacing:5) {
+            Label(name, systemImage: icon)
                 .lineLimit(2)
-                .font(.body)
-            Spacer()
+                .labelStyle(MyLabelStyle())
+            HStack() {
+                Image(systemName: "music.note")
+                Text(count.description)
+            }
         }
+            
     }
     
     init(game: Game) {
         self.name = game.name
         self.sub = game.subTitle
         self.icon = game.icon
+        self.count = game.songs.count
+    }
+    
+    // TODO: 適切なリネーム
+    struct MyLabelStyle: LabelStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            HStack(alignment: .center,spacing: 10) {
+                configuration.icon
+                configuration.title
+            }
+        }
     }
 }
 
