@@ -14,8 +14,15 @@ class Game{
     var name: String
     var subTitle: Date
     var icon: String = "doc.questionmark.fill"
+    
+    // Gameが削除されたらSongも全て破棄する
     @Relationship(deleteRule: .cascade, inverse: \Song.owner)
     var songs: [Song] = []
+    
+    var songCount: Int {
+        songs.count
+    }
+    
     init(name: String, subTitle: Date, songs: [Song] = []) {
         self.name = name
         self.subTitle = subTitle

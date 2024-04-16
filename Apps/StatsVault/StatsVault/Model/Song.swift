@@ -12,11 +12,33 @@ import SwiftUI
 @Model
 class Song {
     var title: String
-    var createdAt: String
+    var createdAt: String = Date.now.description
+    var lastEditAt: String = Date.now.description
+    var songLevel: Int
     var owner: Game?
-    init(title: String, createdAt: String = Date.now.description, owner: Game) {
+    
+    var songLebelIcon: Image {
+        if songLevel >= 0 && songLevel <= 50 {
+            Image(systemName: "\(songLevel).circle")
+        } else {
+            Image(systemName: "exclamationmark.circle")
+        }
+
+        
+    }
+    init(
+        title: String,
+        songLebel: Int = 0,
+        owner: Game
+    ) {
         self.title = title
-        self.createdAt = createdAt
         self.owner = owner
+        self.songLevel = songLebel
+        
+    }
+    
+    func update<T>(keyPath: ReferenceWritableKeyPath<Song, T>, to value: T) {
+        self[keyPath: keyPath] = value
+        lastEditAt = Date.now.description
     }
  }
