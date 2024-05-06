@@ -14,7 +14,14 @@ class Game{
     var name: String
     var subTitle: Date
     var icon: String = "doc.questionmark.fill"
-    
+    // プロセカスコア準拠傾斜
+    var scoreCalcurateRate: [Double] = [
+        1.0,
+        0.7,
+        0.5,
+        0,
+        0
+    ]
     // Gameが削除されたらSongも全て破棄する
     @Relationship(deleteRule: .cascade, inverse: \Song.owner)
     var songs: [Song] = []
@@ -27,12 +34,12 @@ class Game{
         self.name = name
         self.subTitle = subTitle
         self.songs = songs
-        
     }
     init(name: String, subTitle: Date, icon: String) {
         self.name = name
         self.subTitle = subTitle
         self.icon = icon
+        
     }
 
     static var sample: Game {

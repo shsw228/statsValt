@@ -11,10 +11,13 @@ import SymbolPicker
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
+    @State var path = NavigationPath()
+    
+    @State var isSetting: Bool = false
     @Query var games: [Game]
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $path) {
             List{
                 ForEach(games){ game in
                     NavigationLink(value: game.self) {
@@ -22,6 +25,7 @@ struct ContentView: View {
                             .padding(2)
                         
                     }
+                    
                 }
                 .onDelete(perform: { indexSet in
                     delete(indexSet: indexSet)
@@ -41,12 +45,24 @@ struct ContentView: View {
             .navigationDestination(for: Game.self){ game in
                 SongListView(game: game)
             }
+            .navigationDestination(for: RoutePath.self, destination: { int in
+                int.Destination()
+                    .navigationTitle(int.navigationTitle)
+                    .navigationBarTitleDisplayMode(.inline)
+                    
+            })
             .navigationTitle("Games")
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
+                    
                     Button("Add") {
                         modelContext.insert(Game.sample)
                     }
+                    Button(
+                        action: { path.append(RoutePath.setting)},
+                        label: {
+                        Image(systemName: "gear")
+                    })
                 }
             }
         }

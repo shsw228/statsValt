@@ -1,0 +1,67 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "About App" : {
+
+    },
+    "Add" : {
+
+    },
+    "Add games you like!" : {
+
+    },
+    "App Description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StatsVault is score logger of the sound game. "
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "StatsVaultは音楽ゲームを想定したスコア記録アプリです。"
+          }
+        }
+      }
+    },
+    "Appearance" : {
+
+    },
+    "Author" : {
+
+    },
+    "Build" : {
+
+    },
+    "error" : {
+
+    },
+    "Games" : {
+
+    },
+    "General" : {
+
+    },
+    "No Games" : {
+
+    },
+    "shsw228" : {
+
+    },
+    "SongList" : {
+
+    },
+    "Version" : {
+
+    },
+    "Version and Build" : {
+
+    },
+    "サンプル" : {
+
+    }
+  },
+  "version" : "1.0"
+}

@@ -10,10 +10,11 @@ import SwiftUI
 
 @main
 struct StatsVaultApp: App {
-    @Environment(\.colorScheme) var colorScheme
+    @StateObject var defaults = Defaults()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(AppearanceMode(rawValue: defaults.appearance.rawValue)?.colorScheme)
         }
         .modelContainer(for:Game.self)
     }
