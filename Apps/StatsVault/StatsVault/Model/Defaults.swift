@@ -10,11 +10,10 @@ import SwiftUI
     
 final class Defaults: ObservableObject {
     @AppStorage("AppAppearance") public var appearance: AppearanceMode = .system
-   
 }
 
 
-enum AppearanceMode: String {
+enum AppearanceMode: String, CaseIterable {
     case system, light, dark
     var colorScheme: ColorScheme? {
             switch self {

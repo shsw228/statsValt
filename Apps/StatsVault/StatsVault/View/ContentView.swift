@@ -15,7 +15,7 @@ struct ContentView: View {
     
     @State var isSetting: Bool = false
     @Query var games: [Game]
-    
+    @State private var isEditorPresented = false
     var body: some View {
         NavigationStack(path: $path) {
             List{
@@ -31,19 +31,18 @@ struct ContentView: View {
                     delete(indexSet: indexSet)
                 })
             }
-            .overlay(content: {
+            .overlay {
                 if games.isEmpty {
-                    ContentUnavailableView(
-                        "No Games",
-                        systemImage: "gamecontroller",
-                        description: Text(
-                            "Add games you like!"
-                        )
-                    )
+                    ContentUnavailableView{
+                        Label("No Games",systemImage: "gamecontroller")
+                    } description:{
+                        Text("Add games you like!")
+                        
+                    }
                 }
-            })
+            }
             .navigationDestination(for: Game.self){ game in
-                SongListView(game: game)
+                SongListView(gameId: game.storedId)
             }
             .navigationDestination(for: RoutePath.self, destination: { int in
                 int.Destination()
@@ -56,7 +55,8 @@ struct ContentView: View {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     
                     Button("Add") {
-                        modelContext.insert(Game.sample)
+                        // Game追加画面を表示
+                        isEditorPresented = true
                     }
                     Button(
                         action: { path.append(RoutePath.setting)},
@@ -65,6 +65,8 @@ struct ContentView: View {
                     })
                 }
             }
+            .sheet(isPresented: $isEditorPresented) {
+                GameEditor(game: nil)            }
         }
     }
     private func delete(indexSet: IndexSet) {
@@ -73,7 +75,10 @@ struct ContentView: View {
         }
     }
 }
-
 #Preview {
-    ContentView()
+    ModelContainerPreview(ModelContainer.sample) {
+        NavigationStack {
+            ContentView()
+        }
+    }
 }

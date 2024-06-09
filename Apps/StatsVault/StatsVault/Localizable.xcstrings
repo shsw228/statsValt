@@ -10,6 +10,12 @@
     "Add games you like!" : {
 
     },
+    "Add sample songs" : {
+
+    },
+    "Add songs you like!" : {
+
+    },
     "App Description" : {
       "localizations" : {
         "en" : {
@@ -35,7 +41,34 @@
     "Build" : {
 
     },
-    "error" : {
+    "Cancel" : {
+
+    },
+    "Defined as list" : {
+
+    },
+    "Defined same songs as same array" : {
+
+    },
+    "Download from" : {
+
+    },
+    "Fetch song file(Under In construction)" : {
+
+    },
+    "From local" : {
+
+    },
+    "From Sample" : {
+
+    },
+    "From Url" : {
+
+    },
+    "Game Icon" : {
+
+    },
+    "Game Title" : {
 
     },
     "Games" : {
@@ -44,10 +77,25 @@
     "General" : {
 
     },
+    "Load icon from PhotoLibrary" : {
+
+    },
     "No Games" : {
 
     },
+    "No Songs" : {
+
+    },
+    "Open Files(Under In construction)" : {
+
+    },
+    "Save" : {
+
+    },
     "shsw228" : {
+
+    },
+    "Song Importer" : {
 
     },
     "SongList" : {
@@ -57,9 +105,6 @@
 
     },
     "Version and Build" : {
-
-    },
-    "サンプル" : {
 
     }
   },

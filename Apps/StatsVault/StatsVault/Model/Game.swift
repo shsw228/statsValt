@@ -11,9 +11,12 @@ import SwiftUI
 
 @Model
 class Game{
+    @Attribute(.unique)
+    var storedId: String
     var name: String
-    var subTitle: Date
-    var icon: String = "doc.questionmark.fill"
+    
+    var createdTime: Date
+    var systemIcon: String = "doc.questionmark.fill"
     // プロセカスコア準拠傾斜
     var scoreCalcurateRate: [Double] = [
         1.0,
@@ -22,6 +25,7 @@ class Game{
         0,
         0
     ]
+    var difficultyTitle: [String] = ["EASY", "NORMAL", "HARD", "EXPERT", "MASTER"]
     // Gameが削除されたらSongも全て破棄する
     @Relationship(deleteRule: .cascade, inverse: \Song.owner)
     var songs: [Song] = []
@@ -30,23 +34,16 @@ class Game{
         songs.count
     }
     
-    init(name: String, subTitle: Date, songs: [Song] = []) {
+    init(name: String, songs: [Song] = [], icon: String? = nil) {
+        self.storedId = UUID().uuidString
         self.name = name
-        self.subTitle = subTitle
+        self.createdTime = .now
         self.songs = songs
-    }
-    init(name: String, subTitle: Date, icon: String) {
-        self.name = name
-        self.subTitle = subTitle
-        self.icon = icon
         
+        if let icon, !icon.isEmpty {
+            self.systemIcon = icon
+        }
     }
-
-    static var sample: Game {
-        return Game(name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 
-                    subTitle: Date.now)
-    }
-    
 }
 
 

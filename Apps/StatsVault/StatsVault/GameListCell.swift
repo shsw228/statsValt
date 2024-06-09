@@ -15,47 +15,45 @@ struct GameListCell: View {
     let icon: String
     let count: Int
     
+    
     var body: some View {
-        HStack(spacing:5) {
+        HStack(spacing: 5) {
             Label(name, systemImage: icon)
                 .lineLimit(2)
                 .labelStyle(MyLabelStyle())
-            HStack() {
-                Image(systemName: "music.note")
-                Text(count.description)
-            }
+            Spacer()
+            Label(count.description, systemImage: "music.note")
+                .labelStyle(MySongInfoLabelStyle())
         }
             
     }
     
     init(game: Game) {
         self.name = game.name
-        self.sub = game.subTitle
-        self.icon = game.icon
+        self.sub = game.createdTime
+        self.icon = game.systemIcon
         self.count = game.songs.count
     }
     
     // TODO: 適切なリネーム
     struct MyLabelStyle: LabelStyle {
         func makeBody(configuration: Configuration) -> some View {
-            HStack(alignment: .center,spacing: 10) {
+            HStack(alignment: .center,spacing: 15) {
                 configuration.icon
+                    .frame(width: 10)
+                    .padding(5)
                 configuration.title
             }
         }
     }
-}
-
-#Preview(traits: .sizeThatFitsLayout) {
-    do {
-        // Preview時に@Modelな値を渡す際はオンメモリであるconfigを生成してコンテナを生成しないとクラッシュする
-        let config = ModelConfiguration(isStoredInMemoryOnly: true)
-        let container = try ModelContainer(for: Game.self, configurations: config)
-        let item = Game.sample
-        return GameListCell(game: item)
-            .modelContainer(container)
-            .padding()
-    } catch {
-        return Text("error")
+    struct MySongInfoLabelStyle: LabelStyle {
+        func makeBody(configuration: Configuration) -> some View {
+            HStack(alignment: .center, spacing: 5) {
+                configuration.icon
+                configuration.title
+            }
+        }
+        
+        
     }
 }

@@ -14,7 +14,8 @@ struct StatsVaultApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .preferredColorScheme(AppearanceMode(rawValue: defaults.appearance.rawValue)?.colorScheme)
+                .preferredColorScheme(
+                    AppearanceMode(rawValue: defaults.appearance.rawValue)?.colorScheme)
         }
         .modelContainer(for:Game.self)
     }

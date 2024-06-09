@@ -10,12 +10,22 @@
 		B7002DC62BD71DBB00939CC5 /* SongModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7002DC52BD71DBB00939CC5 /* SongModelTest.swift */; };
 		B72F2F9A2BC1D9C60033A6A5 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = B72F2F992BC1D9C60033A6A5 /* SymbolPicker */; };
 		B7589D212BCD713300C7237D /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7589D202BCD713300C7237D /* Song.swift */; };
-		B7589D232BCD7D4C00C7237D /* GameEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7589D222BCD7D4C00C7237D /* GameEditView.swift */; };
 		B7589D252BCD8E8B00C7237D /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7589D242BCD8E8B00C7237D /* SongListView.swift */; };
+		B7717F0F2BF4E7F100A740DE /* GameEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7717F0E2BF4E7F100A740DE /* GameEditor.swift */; };
+		B7717F112BF4E83400A740DE /* SongImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7717F102BF4E83400A740DE /* SongImporter.swift */; };
+		B7717F182BF56ED300A740DE /* sampleSong.json in Resources */ = {isa = PBXBuildFile; fileRef = B7717F162BF56ED300A740DE /* sampleSong.json */; };
+		B7717F192BF56ED300A740DE /* sampleSong2.json in Resources */ = {isa = PBXBuildFile; fileRef = B7717F172BF56ED300A740DE /* sampleSong2.json */; };
+		B7717F1F2BF582F400A740DE /* HighlightSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B7717F1E2BF582F400A740DE /* HighlightSwift */; };
+		B7717F212BF8C05B00A740DE /* GameTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7717F202BF8C05B00A740DE /* GameTemplate.swift */; };
+		B78CCBCF2C0356D300F30DDF /* SampleGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78CCBCE2C0356D300F30DDF /* SampleGenerator.swift */; };
 		B79D93E22BE63B38004FE8BB /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93E12BE63B38004FE8BB /* SettingView.swift */; };
 		B79D93E42BE79AF9004FE8BB /* RoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93E32BE79AF9004FE8BB /* RoutePath.swift */; };
 		B79D93E62BE7A3F9004FE8BB /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B79D93E52BE7A3F9004FE8BB /* Localizable.xcstrings */; };
 		B79D93E82BE89BE6004FE8BB /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93E72BE89BE6004FE8BB /* Defaults.swift */; };
+		B79D93EB2BEF09FD004FE8BB /* ModelContainerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93EA2BEF09FD004FE8BB /* ModelContainerPreview.swift */; };
+		B79D93ED2BEF101F004FE8BB /* Preview+ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93EC2BEF101F004FE8BB /* Preview+ModelContainer.swift */; };
+		B79D93F02BEF10FF004FE8BB /* SampleData+Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93EF2BEF10FF004FE8BB /* SampleData+Game.swift */; };
+		B79D93F22BEF1107004FE8BB /* SampleData+Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79D93F12BEF1107004FE8BB /* SampleData+Song.swift */; };
 		B7B4D8E72BBB148F004110A3 /* StatsVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D8E62BBB148F004110A3 /* StatsVaultApp.swift */; };
 		B7B4D8E92BBB148F004110A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D8E82BBB148F004110A3 /* ContentView.swift */; };
 		B7B4D8EB2BBB1490004110A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7B4D8EA2BBB1490004110A3 /* Assets.xcassets */; };
@@ -25,7 +35,6 @@
 		B7B4D9042BBB1490004110A3 /* StatsVaultUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9032BBB1490004110A3 /* StatsVaultUITestsLaunchTests.swift */; };
 		B7B4D9112BBB1F38004110A3 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9102BBB1F38004110A3 /* Game.swift */; };
 		B7B4D9132BBBD8A6004110A3 /* GameListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B4D9122BBBD8A6004110A3 /* GameListCell.swift */; };
-		B7EC33B82BC1B84D0004FC91 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EC33B72BC1B84D0004FC91 /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,12 +70,21 @@
 /* Begin PBXFileReference section */
 		B7002DC52BD71DBB00939CC5 /* SongModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongModelTest.swift; sourceTree = "<group>"; };
 		B7589D202BCD713300C7237D /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		B7589D222BCD7D4C00C7237D /* GameEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditView.swift; sourceTree = "<group>"; };
 		B7589D242BCD8E8B00C7237D /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		B7717F0E2BF4E7F100A740DE /* GameEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEditor.swift; sourceTree = "<group>"; };
+		B7717F102BF4E83400A740DE /* SongImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongImporter.swift; sourceTree = "<group>"; };
+		B7717F162BF56ED300A740DE /* sampleSong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sampleSong.json; path = StatsVault/SampleData/sampleSong.json; sourceTree = SOURCE_ROOT; };
+		B7717F172BF56ED300A740DE /* sampleSong2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = sampleSong2.json; path = StatsVault/SampleData/sampleSong2.json; sourceTree = SOURCE_ROOT; };
+		B7717F202BF8C05B00A740DE /* GameTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTemplate.swift; sourceTree = "<group>"; };
+		B78CCBCE2C0356D300F30DDF /* SampleGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGenerator.swift; sourceTree = "<group>"; };
 		B79D93E12BE63B38004FE8BB /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		B79D93E32BE79AF9004FE8BB /* RoutePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePath.swift; sourceTree = "<group>"; };
 		B79D93E52BE7A3F9004FE8BB /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B79D93E72BE89BE6004FE8BB /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		B79D93EA2BEF09FD004FE8BB /* ModelContainerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerPreview.swift; sourceTree = "<group>"; };
+		B79D93EC2BEF101F004FE8BB /* Preview+ModelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preview+ModelContainer.swift"; sourceTree = "<group>"; };
+		B79D93EF2BEF10FF004FE8BB /* SampleData+Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleData+Game.swift"; sourceTree = "<group>"; };
+		B79D93F12BEF1107004FE8BB /* SampleData+Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SampleData+Song.swift"; sourceTree = "<group>"; };
 		B7B4D8E32BBB148F004110A3 /* StatsVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatsVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7B4D8E62BBB148F004110A3 /* StatsVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVaultApp.swift; sourceTree = "<group>"; };
 		B7B4D8E82BBB148F004110A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,7 +97,6 @@
 		B7B4D9032BBB1490004110A3 /* StatsVaultUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVaultUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7B4D9102BBB1F38004110A3 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B7B4D9122BBBD8A6004110A3 /* GameListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListCell.swift; sourceTree = "<group>"; };
-		B7EC33B72BC1B84D0004FC91 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72F2F9A2BC1D9C60033A6A5 /* SymbolPicker in Frameworks */,
+				B7717F1F2BF582F400A740DE /* HighlightSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,9 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				B7B4D8E82BBB148F004110A3 /* ContentView.swift */,
+				B7717F0E2BF4E7F100A740DE /* GameEditor.swift */,
+				B7717F102BF4E83400A740DE /* SongImporter.swift */,
 				B7589D242BCD8E8B00C7237D /* SongListView.swift */,
 				B79D93E12BE63B38004FE8BB /* SettingView.swift */,
-				B7589D222BCD7D4C00C7237D /* GameEditView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -130,11 +149,33 @@
 			isa = PBXGroup;
 			children = (
 				B7B4D9102BBB1F38004110A3 /* Game.swift */,
+				B7717F202BF8C05B00A740DE /* GameTemplate.swift */,
 				B79D93E72BE89BE6004FE8BB /* Defaults.swift */,
 				B7589D202BCD713300C7237D /* Song.swift */,
 				B79D93E32BE79AF9004FE8BB /* RoutePath.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B79D93E92BEF09E4004FE8BB /* PreviewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B79D93EA2BEF09FD004FE8BB /* ModelContainerPreview.swift */,
+				B79D93EC2BEF101F004FE8BB /* Preview+ModelContainer.swift */,
+			);
+			path = PreviewHelper;
+			sourceTree = "<group>";
+		};
+		B79D93EE2BEF10EA004FE8BB /* SampleData */ = {
+			isa = PBXGroup;
+			children = (
+				B7717F162BF56ED300A740DE /* sampleSong.json */,
+				B78CCBCE2C0356D300F30DDF /* SampleGenerator.swift */,
+				B7717F172BF56ED300A740DE /* sampleSong2.json */,
+				B79D93EF2BEF10FF004FE8BB /* SampleData+Game.swift */,
+				B79D93F12BEF1107004FE8BB /* SampleData+Song.swift */,
+			);
+			path = SampleData;
 			sourceTree = "<group>";
 		};
 		B7B4D8DA2BBB148F004110A3 = {
@@ -166,9 +207,10 @@
 				B7589D272BCD8EAC00C7237D /* Model */,
 				B7589D262BCD8EA000C7237D /* View */,
 				B7B4D8EA2BBB1490004110A3 /* Assets.xcassets */,
-				B7EC33B72BC1B84D0004FC91 /* Navigation.swift */,
+				B79D93E92BEF09E4004FE8BB /* PreviewHelper */,
 				B7B4D8EC2BBB1490004110A3 /* Preview Content */,
 				B79D93E52BE7A3F9004FE8BB /* Localizable.xcstrings */,
+				B79D93EE2BEF10EA004FE8BB /* SampleData */,
 			);
 			path = StatsVault;
 			sourceTree = "<group>";
@@ -218,6 +260,7 @@
 			name = StatsVault;
 			packageProductDependencies = (
 				B72F2F992BC1D9C60033A6A5 /* SymbolPicker */,
+				B7717F1E2BF582F400A740DE /* HighlightSwift */,
 			);
 			productName = StatsVault;
 			productReference = B7B4D8E32BBB148F004110A3 /* StatsVault.app */;
@@ -294,6 +337,7 @@
 			mainGroup = B7B4D8DA2BBB148F004110A3;
 			packageReferences = (
 				B72F2F982BC1D9C60033A6A5 /* XCRemoteSwiftPackageReference "SymbolPicker" */,
+				B7717F1D2BF582F400A740DE /* XCRemoteSwiftPackageReference "HighlightSwift" */,
 			);
 			productRefGroup = B7B4D8E42BBB148F004110A3 /* Products */;
 			projectDirPath = "";
@@ -311,6 +355,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7717F192BF56ED300A740DE /* sampleSong2.json in Resources */,
+				B7717F182BF56ED300A740DE /* sampleSong.json in Resources */,
 				B7B4D8EE2BBB1490004110A3 /* Preview Assets.xcassets in Resources */,
 				B7B4D8EB2BBB1490004110A3 /* Assets.xcassets in Resources */,
 				B79D93E62BE7A3F9004FE8BB /* Localizable.xcstrings in Resources */,
@@ -338,16 +384,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7589D232BCD7D4C00C7237D /* GameEditView.swift in Sources */,
 				B7589D212BCD713300C7237D /* Song.swift in Sources */,
 				B79D93E42BE79AF9004FE8BB /* RoutePath.swift in Sources */,
 				B7B4D8E92BBB148F004110A3 /* ContentView.swift in Sources */,
+				B7717F212BF8C05B00A740DE /* GameTemplate.swift in Sources */,
 				B79D93E22BE63B38004FE8BB /* SettingView.swift in Sources */,
+				B7717F112BF4E83400A740DE /* SongImporter.swift in Sources */,
 				B7B4D9112BBB1F38004110A3 /* Game.swift in Sources */,
-				B7EC33B82BC1B84D0004FC91 /* Navigation.swift in Sources */,
 				B7B4D8E72BBB148F004110A3 /* StatsVaultApp.swift in Sources */,
 				B7589D252BCD8E8B00C7237D /* SongListView.swift in Sources */,
+				B79D93F22BEF1107004FE8BB /* SampleData+Song.swift in Sources */,
+				B79D93ED2BEF101F004FE8BB /* Preview+ModelContainer.swift in Sources */,
+				B79D93EB2BEF09FD004FE8BB /* ModelContainerPreview.swift in Sources */,
 				B7B4D9132BBBD8A6004110A3 /* GameListCell.swift in Sources */,
+				B79D93F02BEF10FF004FE8BB /* SampleData+Game.swift in Sources */,
+				B78CCBCF2C0356D300F30DDF /* SampleGenerator.swift in Sources */,
+				B7717F0F2BF4E7F100A740DE /* GameEditor.swift in Sources */,
 				B79D93E82BE89BE6004FE8BB /* Defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +745,14 @@
 				minimumVersion = 1.5.2;
 			};
 		};
+		B7717F1D2BF582F400A740DE /* XCRemoteSwiftPackageReference "HighlightSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:shsw228/HighlightSwift.git";
+			requirement = {
+				kind = revision;
+				revision = 202f4b01f7b2bad243e199e6ec8a190c061ef0b9;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -700,6 +760,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B72F2F982BC1D9C60033A6A5 /* XCRemoteSwiftPackageReference "SymbolPicker" */;
 			productName = SymbolPicker;
+		};
+		B7717F1E2BF582F400A740DE /* HighlightSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7717F1D2BF582F400A740DE /* XCRemoteSwiftPackageReference "HighlightSwift" */;
+			productName = HighlightSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

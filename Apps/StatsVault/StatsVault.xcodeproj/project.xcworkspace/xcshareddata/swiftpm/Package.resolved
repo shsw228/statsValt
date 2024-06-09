@@ -1,6 +1,14 @@
 {
   "pins" : [
     {
+      "identity" : "highlightswift",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:shsw228/HighlightSwift.git",
+      "state" : {
+        "revision" : "202f4b01f7b2bad243e199e6ec8a190c061ef0b9"
+      }
+    },
+    {
       "identity" : "symbolpicker?ref=iosexample.com",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/xnth97/SymbolPicker?ref=iosexample.com",
